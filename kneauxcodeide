@@ -1,0 +1,2101 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Divinedevops87/APK-Modding-Guide/blob/LET'S-GEAUX/kneauxcodeide\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7f440d1e"
+      },
+      "source": [
+        "# Task\n",
+        "Create a web-based IDE that includes an HTML, CSS, and JavaScript code editor with live preview functionality similar to CodePen, a full WYSIWYG JavaScript editor, a canvas text editor, an interactive terminal, and advanced IDE features such as linting, auto-completion, project management, asset uploading, version control integration, and collaborative editing."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "_cFLFX--_ydf",
+        "outputId": "cc4299a9-d46b-4b9b-9ed8-da85c410bbdb"
+      },
+      "outputs": [
+        {
+          "ename": "SyntaxError",
+          "evalue": "invalid character '⚜' (U+269C) (ipython-input-4100189408.py, line 12)",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-4100189408.py\"\u001b[0;36m, line \u001b[0;32m12\u001b[0m\n\u001b[0;31m    GEAUX⚜️TECH\u001b[0m\n\u001b[0m         ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid character '⚜' (U+269C)\n"
+          ]
+        }
+      ],
+      "source": [
+        "CodePen Home\n",
+        "\n",
+        "Navigation Menu Toggle\n",
+        "Your Work\n",
+        "Following\n",
+        "Trending\n",
+        "Search\n",
+        "Search CodePen...\n",
+        "\n",
+        "\n",
+        "User Menu\n",
+        "GEAUX⚜️TECH\n",
+        "@sh00k-thad3v\n",
+        "github.com\n",
+        "www.instagram.com\n",
+        "User Avatar of GEAUX⚜️TECH\n",
+        "4 Followers\n",
+        "62 Following\n",
+        "Following\n",
+        "\n",
+        "☆*: .｡. o(≧▽≦)o .｡.:*☆ Lake Charles, Louisiana 🐊\n",
+        "😎 Recovering Alcoholic 💞Mother of six 🤦‍♀️ 🎨 Graphic Design Artis 🤖 COD3R💾\n",
+        "Pens\n",
+        "Collections\n",
+        "Showcase\n",
+        "Popular\n",
+        "All Pens\n",
+        "Templates\n",
+        "Forked\n",
+        "Loved\n",
+        "Tags\n",
+        "Grid View\n",
+        "List View\n",
+        "Responsive full screen background\n",
+        "Open in Editor\n",
+        "Responsive full screen background\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "5\n",
+        "HTML5 CSS-Driven Responsive Image Slider With Captions\n",
+        "Open in Editor\n",
+        "HTML5 CSS-Driven Responsive Image Slider With Captions\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "3\n",
+        "Pure CSS Progress\n",
+        "Open in Editor\n",
+        "Pure CSS Progress\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "9\n",
+        "Animated Weather Cards\n",
+        "Open in Editor\n",
+        "Animated Weather Cards\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "8\n",
+        "CSS Perspective Text Hover\n",
+        "Open in Editor\n",
+        "CSS Perspective Text Hover\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "6\n",
+        "Balkan Style - Portfolio Gallery\n",
+        "Open in Editor\n",
+        "Balkan Style - Portfolio Gallery\n",
+        "Love\n",
+        "0\n",
+        "0\n",
+        "7\n",
+        "Prev\n",
+        "Next\n",
+        "CodePen\n",
+        "About\n",
+        "Blog\n",
+        "Podcast\n",
+        "Documentation\n",
+        "Support\n",
+        "Advertise\n",
+        "For\n",
+        "Teams\n",
+        "Education\n",
+        "Privacy\n",
+        "Embeds\n",
+        "Asset Hosting\n",
+        "Social\n",
+        "YouTube\n",
+        "Bluesky\n",
+        "Instagram\n",
+        "Mastodon\n",
+        "Community\n",
+        "Spark\n",
+        "Challenges\n",
+        "Topics\n",
+        "Code of Conduct\n",
+        "CodePen Home\n",
+        "©2025 CodePen\n",
+        "\n",
+        "Demo or it didn't happen.\n",
+        "\n",
+        "Terms of Service · Privacy Policy\n",
+        "  i'd like you to create me my own html css js code snippet and full wyswyg js and canvas text editor, terminal and built in ide but that has more features than codepen\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "caf1ad78"
+      },
+      "source": [
+        "### How to Use This IDE Prototype\n",
+        "\n",
+        "1.  **Run the HTTP Server**: Execute the Python code cell below to start a simple HTTP server. This will make your `index.html` file accessible via a web browser.\n",
+        "2.  **Open in Browser**: After the server starts, it will provide a URL (usually starting with `http://localhost:8000` or similar if running locally, or a Colab-provided URL). Copy and paste this URL into a new tab in your web browser.\n",
+        "3.  **Interact with the Editors**:\n",
+        "    *   **HTML, CSS, JavaScript Editors**: You'll see three CodeMirror instances. Type or paste your code into these. The live preview iframe below will automatically update as you type.\n",
+        "    *   **WYSIWYG Editor**: Below the code editors, you'll find the TinyMCE WYSIWYG editor. You can use its toolbar to format text, insert links, images, etc.\n",
+        "    *   **Canvas Text Editor**: At the bottom, there's a canvas and a text area. Type into the text area, and your text will be rendered directly onto the canvas, demonstrating custom text rendering.\n",
+        "\n",
+        "To stop the server, interrupt the execution of the server cell (usually by clicking the square stop button next to the cell output)."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "88f0db2b",
+        "outputId": "deb3aba4-44a6-4303-fc80-d41e93f46199"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Serving at port 8000\n",
+            "Open this URL in your browser: http://localhost:8000/\n"
+          ]
+        }
+      ],
+      "source": [
+        "import http.server\n",
+        "import socketserver\n",
+        "import os\n",
+        "\n",
+        "PORT = 8000\n",
+        "\n",
+        "# Change to the directory where your index.html is located\n",
+        "# Assuming index.html, style.css, script.js and lib folder are in the current directory\n",
+        "os.chdir('/content')\n",
+        "\n",
+        "Handler = http.server.SimpleHTTPRequestHandler\n",
+        "\n",
+        "with socketserver.TCPServer((\"\", PORT), Handler) as httpd:\n",
+        "    print(f\"Serving at port {PORT}\")\n",
+        "    print(f\"Open this URL in your browser: http://localhost:{PORT}/\")\n",
+        "    # This will keep the server running until you interrupt the kernel\n",
+        "    httpd.serve_forever()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "29a6f009"
+      },
+      "source": [
+        "## Set Up Project Structure\n",
+        "\n",
+        "### Subtask:\n",
+        "Create the basic HTML, CSS, and JavaScript file structure for the application. This will include an index.html file, a style.css file, and a script.js file, along with any necessary library inclusions (like a code editor library).\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "324c056f"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The first step in setting up the project structure is to create the main HTML file, `index.html`, which will serve as the entry point for the web application.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "95808ccc"
+      },
+      "outputs": [],
+      "source": [
+        "%%writefile index.html\n",
+        "<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Code Editor IDE</title>\n",
+        "    <link rel=\"stylesheet\" href=\"style.css\">\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Welcome to My Custom IDE</h1>\n",
+        "    <p>This is where the editor and terminal will live.</p>\n",
+        "    <script src=\"script.js\"></script>\n",
+        "</body>\n",
+        "</html>\n",
+        "print(\"Created index.html\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4b74c348"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Following the instructions, the next step is to create the `style.css` file to handle the styling of the application. This will be an empty file for now, but will serve as a placeholder.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "99eebdc8",
+        "outputId": "e8e12284-ad33-43f8-e59b-e876e47eee30"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Writing style.css\n"
+          ]
+        }
+      ],
+      "source": [
+        "%%writefile style.css\n",
+        "/* Basic styling for the IDE will go here */\n",
+        "\n",
+        "print(\"Created style.css\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "11fb3e31"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The next step is to create the `script.js` file for JavaScript logic and interactivity, as per the subtask instructions. This file will be empty for now but will serve as a placeholder for future code.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9166b1d7",
+        "outputId": "5c511003-eb0c-4523-ef51-3801ee4d5468"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Writing script.js\n"
+          ]
+        }
+      ],
+      "source": [
+        "%%writefile script.js\n",
+        "// JavaScript for IDE functionality will go here\n",
+        "\n",
+        "print(\"Created script.js\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "31897fae"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The subtask also specifies including any necessary library inclusions. As per the instructions, creating a `lib` directory to store external JavaScript or CSS libraries is an optional but recommended step to complete the basic file structure setup.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cdf470f6",
+        "outputId": "50d69318-8c4d-4f06-e90c-99049742ead9"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Created 'lib' directory for external libraries.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import os\n",
+        "if not os.path.exists('lib'):\n",
+        "    os.makedirs('lib')\n",
+        "    print(\"Created 'lib' directory for external libraries.\")\n",
+        "else:\n",
+        "    print(\"'lib' directory already exists.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e04ff4ed"
+      },
+      "source": [
+        "## Implement HTML/CSS/JS Code Editor\n",
+        "\n",
+        "### Subtask:\n",
+        "Integrate a robust code editor library (e.g., CodeMirror, Monaco Editor) to allow users to write and edit HTML, CSS, and JavaScript snippets. This step will focus on getting the editor instances working for each language.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5e4a363a"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The first actionable instruction is to download the CodeMirror library. I will use `wget` to download the CodeMirror archive to the `lib` directory as specified, which is a common practice for external libraries.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "70b99114",
+        "outputId": "05eda094-d7c5-467d-b2f7-ad280c56429f"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Downloading CodeMirror from https://codemirror.net/5/5.65.16/codemirror-5.65.16.zip...\n",
+            "Error downloading CodeMirror: 404 Client Error: Not Found for url: https://codemirror.net/5/5.65.16/codemirror-5.65.16.zip\n",
+            "Please check the URL or your internet connection.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import requests\n",
+        "\n",
+        "# CodeMirror version to download\n",
+        "CODE_MIRROR_VERSION = \"5.65.16\"\n",
+        "DOWNLOAD_URL = f\"https://codemirror.net/5/{CODE_MIRROR_VERSION}/codemirror-{CODE_MIRROR_VERSION}.zip\"\n",
+        "LOCAL_ZIP_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}.zip\"\n",
+        "\n",
+        "# Create 'lib' directory if it doesn't exist (already done in previous step, but good to ensure)\n",
+        "import os\n",
+        "if not os.path.exists('lib'):\n",
+        "    os.makedirs('lib')\n",
+        "\n",
+        "# Download CodeMirror\n",
+        "print(f\"Downloading CodeMirror from {DOWNLOAD_URL}...\")\n",
+        "try:\n",
+        "    response = requests.get(DOWNLOAD_URL, stream=True)\n",
+        "    response.raise_for_status() # Raise an exception for bad status codes\n",
+        "    with open(LOCAL_ZIP_PATH, 'wb') as f:\n",
+        "        for chunk in response.iter_content(chunk_size=8192):\n",
+        "            f.write(chunk)\n",
+        "    print(\"CodeMirror downloaded successfully.\")\n",
+        "except requests.exceptions.RequestException as e:\n",
+        "    print(f\"Error downloading CodeMirror: {e}\")\n",
+        "    print(\"Please check the URL or your internet connection.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f0e93a03"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The previous attempt to download CodeMirror failed due to a 404 error from the original URL. I will update the `DOWNLOAD_URL` to point to the official GitHub release archive, which is a more reliable source for the specified version.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "90c8044c",
+        "outputId": "ba5576de-5102-48df-b534-d21423260b0e"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Downloading CodeMirror from https://github.com/codemirror/CodeMirror/archive/refs/tags/5.65.16.zip...\n",
+            "CodeMirror downloaded successfully.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import requests\n",
+        "\n",
+        "# CodeMirror version to download\n",
+        "CODE_MIRROR_VERSION = \"5.65.16\"\n",
+        "DOWNLOAD_URL = f\"https://github.com/codemirror/CodeMirror/archive/refs/tags/{CODE_MIRROR_VERSION}.zip\"\n",
+        "LOCAL_ZIP_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}.zip\"\n",
+        "\n",
+        "# Create 'lib' directory if it doesn't exist\n",
+        "import os\n",
+        "if not os.path.exists('lib'):\n",
+        "    os.makedirs('lib')\n",
+        "\n",
+        "# Download CodeMirror\n",
+        "print(f\"Downloading CodeMirror from {DOWNLOAD_URL}...\")\n",
+        "try:\n",
+        "    response = requests.get(DOWNLOAD_URL, stream=True)\n",
+        "    response.raise_for_status() # Raise an exception for bad status codes\n",
+        "    with open(LOCAL_ZIP_PATH, 'wb') as f:\n",
+        "        for chunk in response.iter_content(chunk_size=8192):\n",
+        "            f.write(chunk)\n",
+        "    print(\"CodeMirror downloaded successfully.\")\n",
+        "except requests.exceptions.RequestException as e:\n",
+        "    print(f\"Error downloading CodeMirror: {e}\")\n",
+        "    print(\"Please check the URL or your internet connection.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bc7c7f01"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the CodeMirror zip file has been successfully downloaded, the next step is to extract its contents to make the library files accessible. This will involve unzipping the downloaded file into the `lib` directory.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "27dcd7b8",
+        "outputId": "28d76e42-899b-4ed6-af2f-9638d7ed92da"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Extracting CodeMirror to lib/codemirror-5.65.16...\n",
+            "CodeMirror extracted successfully.\n",
+            "Removed CodeMirror zip file.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import zipfile\n",
+        "import os\n",
+        "\n",
+        "# Path to the downloaded zip file\n",
+        "LOCAL_ZIP_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}.zip\"\n",
+        "\n",
+        "# Directory to extract CodeMirror files into (e.g., lib/codemirror-5.65.16)\n",
+        "EXTRACT_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}\"\n",
+        "\n",
+        "# Create extraction directory if it doesn't exist\n",
+        "if not os.path.exists(EXTRACT_PATH):\n",
+        "    os.makedirs(EXTRACT_PATH)\n",
+        "\n",
+        "# Extract the zip file\n",
+        "print(f\"Extracting CodeMirror to {EXTRACT_PATH}...\")\n",
+        "try:\n",
+        "    with zipfile.ZipFile(LOCAL_ZIP_PATH, 'r') as zip_ref:\n",
+        "        zip_ref.extractall(EXTRACT_PATH)\n",
+        "    print(\"CodeMirror extracted successfully.\")\n",
+        "    # Optionally, remove the zip file after extraction\n",
+        "    os.remove(LOCAL_ZIP_PATH)\n",
+        "    print(\"Removed CodeMirror zip file.\")\n",
+        "except FileNotFoundError:\n",
+        "    print(f\"Error: CodeMirror zip file not found at {LOCAL_ZIP_PATH}\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error extracting CodeMirror: {e}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c397214c"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the CodeMirror library has been extracted, the next step is to update `index.html` to include the necessary CodeMirror CSS and JavaScript files. This involves adding `<link>` tags for the core CSS and `<script>` tags for the core JavaScript and language modes into the `<head>` section of `index.html`.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 211
+        },
+        "id": "3ddf7389",
+        "outputId": "c26e8c0a-187e-41b4-8a62-c3c1b7e7f34f"
+      },
+      "outputs": [
+        {
+          "ename": "FileNotFoundError",
+          "evalue": "[Errno 2] No such file or directory: 'index.html'",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mFileNotFoundError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-4120169394.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# Read the existing index.html content\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 6\u001b[0;31m \u001b[0;32mwith\u001b[0m \u001b[0mopen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'index.html'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'r'\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mf\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      7\u001b[0m     \u001b[0mhtml_content\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No such file or directory: 'index.html'"
+          ]
+        }
+      ],
+      "source": [
+        "CODE_MIRROR_VERSION = \"5.65.16\"\n",
+        "EXTRACT_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}\"\n",
+        "CODE_MIRROR_BASE_PATH = f\"{EXTRACT_PATH}/codemirror5-{CODE_MIRROR_VERSION}\"\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Prepare the CodeMirror inclusions\n",
+        "codemirror_includes = f\"\"\"\n",
+        "    <link rel=\"stylesheet\" href=\"{CODE_MIRROR_BASE_PATH}/lib/codemirror.css\">\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/lib/codemirror.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/xml/xml.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/javascript/javascript.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/css/css.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/htmlmixed/htmlmixed.js\"></script>\n",
+        "\"\"\"\n",
+        "\n",
+        "# Insert CodeMirror includes before the closing </head> tag\n",
+        "# We'll split the html_content, insert the includes, and then join back\n",
+        "# Find the last occurrence of </head> to insert above it\n",
+        "head_end_index = html_content.rfind('</head>')\n",
+        "if head_end_index != -1:\n",
+        "    updated_html_content = \\\n",
+        "        html_content[:head_end_index] + \\\n",
+        "        codemirror_includes + \\\n",
+        "        html_content[head_end_index:]\n",
+        "else:\n",
+        "    # Fallback if </head> not found, append to body or handle error\n",
+        "    print(\"Warning: </head> tag not found in index.html. Appending CodeMirror includes to the end of the file.\")\n",
+        "    updated_html_content = html_content + codemirror_includes\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html to include CodeMirror CSS and JS files.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4a352f5e"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The next step is to modify `index.html` to include `textarea` elements for HTML, CSS, and JavaScript editors, each with a unique ID, as specified in the instructions. These will serve as containers for the CodeMirror instances.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "8b7f624a"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Define the textarea elements for the editors\n",
+        "# We'll replace the existing body content for simplicity for now\n",
+        "editor_textareas = '''\n",
+        "    <div class=\"editors-container\">\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>HTML</h2>\n",
+        "            <textarea id=\"html-editor\"></textarea>\n",
+        "        </div>\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>CSS</h2>\n",
+        "            <textarea id=\"css-editor\"></textarea>\n",
+        "        </div>\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>JavaScript</h2>\n",
+        "            <textarea id=\"js-editor\"></textarea>\n",
+        "        </div>\n",
+        "    </div>\n",
+        "    <div class=\"output-container\">\n",
+        "        <h2>Output</h2>\n",
+        "        <iframe id=\"live-preview\"></iframe>\n",
+        "    </div>\n",
+        "'''\n",
+        "\n",
+        "# Find the body content to replace it or insert into it\n",
+        "# A more robust way would be to target a specific div, but for now, we'll replace\n",
+        "# everything between <body> and </body>\n",
+        "updated_html_content = re.sub(r'(<body>.*?</body>)', f'<body>\\n{editor_textareas}\\n    <script src=\"script.js\"></script>\\n</body>', html_content, flags=re.DOTALL)\n",
+        "\n",
+        "# If the regex replacement didn't work (e.g., body tags are missing or malformed),\n",
+        "# we can try a simpler append, but the regex should be robust enough for well-formed HTML.\n",
+        "# Ensure script.js is still included and moved to the end of the body\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html with textarea elements for code editors and a live preview iframe.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1f22db8f"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the `textarea` elements are in `index.html`, the next step is to initialize the CodeMirror instances for each of them in `script.js`, configuring them with the correct language modes and basic options, and adding some placeholder code as per the instructions.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c8197024"
+      },
+      "outputs": [],
+      "source": [
+        "CODE_MIRROR_BASE_PATH = \"lib/codemirror-5.65.16/codemirror5-5.65.16\"\n",
+        "\n",
+        "script_js_content = f\"\"\"\n",
+        "// Initialize CodeMirror instances\n",
+        "\n",
+        "const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-editor'), {\n",
+        "    mode: 'htmlmixed',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseTags: true,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-editor'), {\n",
+        "    mode: 'css',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-editor'), {\n",
+        "    mode: 'javascript',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "// Set initial placeholder code\n",
+        "htmlEditor.setValue(`<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Live Preview</title>\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Hello, World!</h1>\n",
+        "    <div id=\"app\"></div>\n",
+        "</body>\n",
+        "</html>`);\n",
+        "\n",
+        "cssEditor.setValue(`body {\n",
+        "    font-family: sans-serif;\n",
+        "    display: flex;\n",
+        "    justify-content: center;\n",
+        "    align-items: center;\n",
+        "    min-height: 100vh;\n",
+        "    background-color: #f0f0f0;\n",
+        "}\n",
+        "\n",
+        "h1 {\n",
+        "    color: #333;\n",
+        "}`);\n",
+        "\n",
+        "jsEditor.setValue(`console.log('Hello from JavaScript!');\n",
+        "document.getElementById('app').innerHTML = '<p>Rendered from JS!</p>';`);\n",
+        "\n",
+        "// Live preview functionality (to be implemented later in detail)\n",
+        "function updatePreview() {\n",
+        "    const previewFrame = document.getElementById('live-preview');\n",
+        "    const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;\n",
+        "\n",
+        "    preview.open();\n",
+        "    preview.write(\n",
+        "        htmlEditor.getValue() +\n",
+        "        '<style>' + cssEditor.getValue() + '</style>' +\n",
+        "        '<script>' + jsEditor.getValue() + '<\\/script>'\n",
+        "    );\n",
+        "    preview.close();\n",
+        "}\n",
+        "\n",
+        "// Update preview on editor changes\n",
+        "htmlEditor.on('change', updatePreview);\n",
+        "cssEditor.on('change', updatePreview);\n",
+        "jsEditor.on('change', updatePreview);\n",
+        "\n",
+        "// Initial update\n",
+        "updatePreview();\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('script.js', 'w') as f:\n",
+        "    f.write(script_js_content)\n",
+        "\n",
+        "print(\"Updated script.js to initialize CodeMirror instances and set up live preview.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9aab1c1b"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The previous code failed with a `SyntaxError` indicating that a line intended to be part of a multi-line string was instead parsed as Python code. This often happens if the multi-line string literal was prematurely terminated or if there's a subtle parsing issue with f-strings containing escaped backticks. Since the `CODE_MIRROR_BASE_PATH` variable is not actually interpolated into the `script_js_content` string, the `f` prefix is redundant. Removing the `f` prefix will ensure the content is treated as a regular triple-quoted string, which is often more robust against such parsing ambiguities.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6ab07d8d"
+      },
+      "outputs": [],
+      "source": [
+        "CODE_MIRROR_BASE_PATH = \"lib/codemirror-5.65.16/codemirror5-5.65.16\"\n",
+        "\n",
+        "script_js_content = \"\"\"\n",
+        "// Initialize CodeMirror instances\n",
+        "\n",
+        "const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-editor'), {\n",
+        "    mode: 'htmlmixed',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseTags: true,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-editor'), {\n",
+        "    mode: 'css',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-editor'), {\n",
+        "    mode: 'javascript',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "// Set initial placeholder code\n",
+        "htmlEditor.setValue(`<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Live Preview</title>\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Hello, World!</h1>\n",
+        "    <div id=\"app\"></div>\n",
+        "</body>\n",
+        "</html>`);\n",
+        "\n",
+        "cssEditor.setValue(`body {\n",
+        "    font-family: sans-serif;\n",
+        "    display: flex;\n",
+        "    justify-content: center;\n",
+        "    align-items: center;\n",
+        "    min-height: 100vh;\n",
+        "    background-color: #f0f0f0;\n",
+        "}\n",
+        "\n",
+        "h1 {\n",
+        "    color: #333;\n",
+        "}`);\n",
+        "\n",
+        "jsEditor.setValue(`console.log('Hello from JavaScript!');\n",
+        "document.getElementById('app').innerHTML = '<p>Rendered from JS!</p>';`);\n",
+        "\n",
+        "// Live preview functionality (to be implemented later in detail)\n",
+        "function updatePreview() {\n",
+        "    const previewFrame = document.getElementById('live-preview');\n",
+        "    const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;\n",
+        "\n",
+        "    preview.open();\n",
+        "    preview.write(\n",
+        "        htmlEditor.getValue() +\n",
+        "        '<style>' + cssEditor.getValue() + '</style>' +\n",
+        "        '<script>' + jsEditor.getValue() + '<\\/script>'\n",
+        "    );\n",
+        "    preview.close();\n",
+        "}\n",
+        "\n",
+        "// Update preview on editor changes\n",
+        "htmlEditor.on('change', updatePreview);\n",
+        "cssEditor.on('change', updatePreview);\n",
+        "jsEditor.on('change', updatePreview);\n",
+        "\n",
+        "// Initial update\n",
+        "updatePreview();\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('script.js', 'w') as f:\n",
+        "    f.write(script_js_content)\n",
+        "\n",
+        "print(\"Updated script.js to initialize CodeMirror instances and set up live preview.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "375cd2a9"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The previous execution resulted in a `SyntaxWarning` in Python due to an invalid escape sequence `\\/` within the multi-line string. While the JavaScript output itself is functionally correct, removing the unnecessary backslash in `</script>` within the Python string will resolve this Python-level warning without affecting the JavaScript functionality.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "b5b0f281"
+      },
+      "outputs": [],
+      "source": [
+        "CODE_MIRROR_BASE_PATH = \"lib/codemirror-5.65.16/codemirror5-5.65.16\"\n",
+        "\n",
+        "script_js_content = \"\"\"\n",
+        "// Initialize CodeMirror instances\n",
+        "\n",
+        "const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-editor'), {\n",
+        "    mode: 'htmlmixed',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseTags: true,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-editor'), {\n",
+        "    mode: 'css',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-editor'), {\n",
+        "    mode: 'javascript',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "// Set initial placeholder code\n",
+        "htmlEditor.setValue(`<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Live Preview</title>\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Hello, World!</h1>\n",
+        "    <div id=\"app\"></div>\n",
+        "</body>\n",
+        "</html>`);\n",
+        "\n",
+        "cssEditor.setValue(`body {\n",
+        "    font-family: sans-serif;\n",
+        "    display: flex;\n",
+        "    justify-content: center;\n",
+        "    align-items: center;\n",
+        "    min-height: 100vh;\n",
+        "    background-color: #f0f0f0;\n",
+        "}\n",
+        "\n",
+        "h1 {\n",
+        "    color: #333;\n",
+        "}`);\n",
+        "\n",
+        "jsEditor.setValue(`console.log('Hello from JavaScript!');\n",
+        "document.getElementById('app').innerHTML = '<p>Rendered from JS!</p>';`);\n",
+        "\n",
+        "// Live preview functionality (to be implemented later in detail)\n",
+        "function updatePreview() {\n",
+        "    const previewFrame = document.getElementById('live-preview');\n",
+        "    const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;\n",
+        "\n",
+        "    preview.open();\n",
+        "    preview.write(\n",
+        "        htmlEditor.getValue() +\n",
+        "        '<style>' + cssEditor.getValue() + '</style>' +\n",
+        "        '<script>' + jsEditor.getValue() + '</script>'\n",
+        "    );\n",
+        "    preview.close();\n",
+        "}\n",
+        "\n",
+        "// Update preview on editor changes\n",
+        "htmlEditor.on('change', updatePreview);\n",
+        "cssEditor.on('change', updatePreview);\n",
+        "jsEditor.on('change', updatePreview);\n",
+        "\n",
+        "// Initial update\n",
+        "updatePreview();\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('script.js', 'w') as f:\n",
+        "    f.write(script_js_content)\n",
+        "\n",
+        "print(\"Updated script.js to initialize CodeMirror instances and set up live preview.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2251d905"
+      },
+      "source": [
+        "## Develop WYSIWYG Editor Component\n",
+        "\n",
+        "### Subtask:\n",
+        "Implement a full WYSIWYG (What You See Is What You Get) JavaScript editor for rich text editing. This could involve integrating another library or building a custom solution for content manipulation.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8e22ea6d"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The first instruction is to update `index.html` to include a new element where the WYSIWYG editor will be initialized. I will add a `div` with the ID `wysiwyg-editor` within the main `editors-container`.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "97d2349f"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Define the WYSIWYG editor element\n",
+        "wysiwyg_editor_element = '''\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>WYSIWYG Editor</h2>\n",
+        "            <div id=\"wysiwyg-editor\"></div>\n",
+        "        </div>'''\n",
+        "\n",
+        "# Find the end of the editors-container div and insert the new element before it\n",
+        "# This regex looks for the closing </div> of editors-container.\n",
+        "# It's assumed that editors-container is the first div with that class and structure.\n",
+        "match = re.search(r'(<div class=\"editors-container\">.*?)(<\\/div>\\s*<div class=\"output-container\">)', html_content, re.DOTALL)\n",
+        "\n",
+        "if match:\n",
+        "    updated_html_content = html_content[:match.start(2)] + wysiwyg_editor_element + match.group(2)\n",
+        "else:\n",
+        "    print(\"Warning: Could not find the correct insertion point for WYSIWYG editor. Appending to the end of editors-container.\")\n",
+        "    # Fallback: if not found, try to append it right before the output-container\n",
+        "    updated_html_content = re.sub(r'(<div class=\"output-container\">)', f'{wysiwyg_editor_element}\\n    \\1', html_content, flags=re.DOTALL)\n",
+        "\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html with a div element for the WYSIWYG editor.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aad370ea"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The next step is to download the TinyMCE library, as specified in the instructions. I will use `requests` to download the latest stable version of TinyMCE as a zip file into the `lib` directory.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "2bd7ef02"
+      },
+      "outputs": [],
+      "source": [
+        "import requests\n",
+        "import os\n",
+        "\n",
+        "TINYMCE_VERSION = \"6.8.3\" # Latest stable version at the time of writing\n",
+        "DOWNLOAD_URL = f\"https://github.com/tinymce/tinymce/archive/refs/tags/{TINYMCE_VERSION}.zip\"\n",
+        "LOCAL_ZIP_PATH = f\"lib/tinymce-{TINYMCE_VERSION}.zip\"\n",
+        "\n",
+        "# Create 'lib' directory if it doesn't exist\n",
+        "if not os.path.exists('lib'):\n",
+        "    os.makedirs('lib')\n",
+        "\n",
+        "# Download TinyMCE\n",
+        "print(f\"Downloading TinyMCE from {DOWNLOAD_URL}...\")\n",
+        "try:\n",
+        "    response = requests.get(DOWNLOAD_URL, stream=True)\n",
+        "    response.raise_for_status() # Raise an exception for bad status codes\n",
+        "    with open(LOCAL_ZIP_PATH, 'wb') as f:\n",
+        "        for chunk in response.iter_content(chunk_size=8192):\n",
+        "            f.write(chunk)\n",
+        "    print(\"TinyMCE downloaded successfully.\")\n",
+        "except requests.exceptions.RequestException as e:\n",
+        "    print(f\"Error downloading TinyMCE: {e}\")\n",
+        "    print(\"Please check the URL or your internet connection.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "395a6631"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the TinyMCE zip file has been successfully downloaded, the next step is to extract its contents to make the library files accessible. This involves unzipping the downloaded file into the `lib` directory.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "f14421e2"
+      },
+      "outputs": [],
+      "source": [
+        "import zipfile\n",
+        "import os\n",
+        "\n",
+        "# Path to the downloaded zip file\n",
+        "LOCAL_ZIP_PATH = f\"lib/tinymce-{TINYMCE_VERSION}.zip\"\n",
+        "\n",
+        "# Directory to extract TinyMCE files into (e.g., lib/tinymce-6.8.3)\n",
+        "EXTRACT_PATH_TINYMCE = f\"lib/tinymce-{TINYMCE_VERSION}\"\n",
+        "\n",
+        "# Create extraction directory if it doesn't exist\n",
+        "if not os.path.exists(EXTRACT_PATH_TINYMCE):\n",
+        "    os.makedirs(EXTRACT_PATH_TINYMCE)\n",
+        "\n",
+        "# Extract the zip file\n",
+        "print(f\"Extracting TinyMCE to {EXTRACT_PATH_TINYMCE}...\")\n",
+        "try:\n",
+        "    with zipfile.ZipFile(LOCAL_ZIP_PATH, 'r') as zip_ref:\n",
+        "        # TinyMCE zips usually have a top-level folder inside the zip\n",
+        "        # We want to extract directly into EXTRACT_PATH_TINYMCE, so we'll adjust paths\n",
+        "        for member in zip_ref.namelist():\n",
+        "            # For example, if zip contains 'tinymce-6.8.3/...', we want 'lib/tinymce-6.8.3/...'\n",
+        "            # Split off the first directory name from the member path\n",
+        "            parts = member.split('/', 1)\n",
+        "            if len(parts) > 1: # It's not a top-level directory itself\n",
+        "                # Construct the new path for extraction\n",
+        "                target_path = os.path.join(EXTRACT_PATH_TINYMCE, parts[1])\n",
+        "                if not os.path.exists(os.path.dirname(target_path)) and os.path.dirname(target_path) != '':\n",
+        "                    os.makedirs(os.path.dirname(target_path))\n",
+        "                if not member.endswith('/'): # Don't try to extract a directory entry as a file\n",
+        "                    with zip_ref.open(member) as source, open(target_path, 'wb') as target:\n",
+        "                        target.write(source.read())\n",
+        "            elif member.endswith('/'): # It's a top-level directory, ensure it exists\n",
+        "                dir_path = os.path.join(EXTRACT_PATH_TINYMCE, member.split('/')[0])\n",
+        "                if not os.path.exists(dir_path):\n",
+        "                    os.makedirs(dir_path)\n",
+        "\n",
+        "    print(\"TinyMCE extracted successfully.\")\n",
+        "    # Optionally, remove the zip file after extraction\n",
+        "    os.remove(LOCAL_ZIP_PATH)\n",
+        "    print(\"Removed TinyMCE zip file.\")\n",
+        "except FileNotFoundError:\n",
+        "    print(f\"Error: TinyMCE zip file not found at {LOCAL_ZIP_PATH}\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error extracting TinyMCE: {e}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2ccc5255"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that TinyMCE is extracted, I need to update `index.html` to include the TinyMCE JavaScript library. This will allow the browser to load TinyMCE and enable its functionality.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "2f78be93"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "TINYMCE_VERSION = \"6.8.3\"\n",
+        "EXTRACT_PATH_TINYMCE = f\"lib/tinymce-{TINYMCE_VERSION}\"\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Prepare the TinyMCE inclusion script tag\n",
+        "# The actual tiny.min.js is usually found in the js/tinymce/ directory inside the extracted folder\n",
+        "tinymce_script_tag = f'    <script src=\"{EXTRACT_PATH_TINYMCE}/tinymce-{TINYMCE_VERSION}/js/tinymce/tinymce.min.js\"></script>\\n'\n",
+        "\n",
+        "# Find the position of the existing script.js tag to insert TinyMCE before it\n",
+        "# We want TinyMCE to load before our custom script.js\n",
+        "script_js_tag_index = html_content.rfind('<script src=\"script.js\"></script>')\n",
+        "\n",
+        "if script_js_tag_index != -1:\n",
+        "    updated_html_content = \\\n",
+        "        html_content[:script_js_tag_index] + \\\n",
+        "        tinymce_script_tag + \\\n",
+        "        html_content[script_js_tag_index:]\n",
+        "else:\n",
+        "    print(\"Warning: Could not find script.js tag. Appending TinyMCE script to the end of the body.\")\n",
+        "    # Fallback if script.js not found, append before closing </body>\n",
+        "    body_end_index = html_content.rfind('</body>')\n",
+        "    if body_end_index != -1:\n",
+        "        updated_html_content = html_content[:body_end_index] + tinymce_script_tag + html_content[body_end_index:]\n",
+        "    else:\n",
+        "        updated_html_content = html_content + tinymce_script_tag # append to end of file\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html to include TinyMCE JavaScript library.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3f75ce46"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The previous step incorrectly placed the TinyMCE script after `script.js` due to a precise `rfind` mismatch for the `script.js` tag. This step will correct `index.html` by first removing any existing TinyMCE script tags to prevent duplicates, then robustly finding the `script.js` tag, and finally inserting the TinyMCE script immediately before it as required by the instructions.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "c213f8ee"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "TINYMCE_VERSION = \"6.8.3\"\n",
+        "EXTRACT_PATH_TINYMCE = f\"lib/tinymce-{TINYMCE_VERSION}\"\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Prepare the TinyMCE inclusion script tag, including a newline for proper formatting\n",
+        "tinymce_script_tag_to_insert = f'    <script src=\"{EXTRACT_PATH_TINYMCE}/tinymce-{TINYMCE_VERSION}/js/tinymce/tinymce.min.js\"></script>\\n'\n",
+        "\n",
+        "# --- Step 1: Remove any previously added TinyMCE script tags to prevent duplicates and ensure correct placement ---\n",
+        "# This regex will look for the specific TinyMCE script tag we generate, accounting for varying versions\n",
+        "# It captures the full line including leading whitespace and trailing newline.\n",
+        "# Example:     <script src=\"lib/tinymce-6.8.3/tinymce-6.8.3/js/tinymce/tinymce.min.js\"></script>\\n\n",
+        "tinymce_script_pattern = r'(\\s*<script src=\"lib/tinymce-\\d+\\.\\d+\\.\\d+/tinymce-\\d+\\.\\d+\\.\\d+/js/tinymce/tinymce.min.js\"></script>\\s*\\n?)'\n",
+        "html_content_cleaned = re.sub(tinymce_script_pattern, '', html_content)\n",
+        "\n",
+        "# --- Step 2: Find the exact location of the script.js tag ---\n",
+        "# We need to find the specific line for script.js, accounting for leading spaces and newline\n",
+        "script_js_line_pattern = r'(\\s*<script src=\"script.js\"></script>\\n)'\n",
+        "match_script_js_line = re.search(script_js_line_pattern, html_content_cleaned)\n",
+        "\n",
+        "updated_html_content = html_content_cleaned\n",
+        "\n",
+        "if match_script_js_line:\n",
+        "    # --- Step 3: Insert TinyMCE script directly before the script.js tag ---\n",
+        "    # Replace the script.js line with the TinyMCE script followed by the original script.js line\n",
+        "    updated_html_content = updated_html_content.replace(\n",
+        "        match_script_js_line.group(1),\n",
+        "        tinymce_script_tag_to_insert + match_script_js_line.group(1)\n",
+        "    )\n",
+        "    print(\"Correctly updated index.html to include TinyMCE JavaScript library before script.js.\")\n",
+        "else:\n",
+        "    # Fallback if script.js not found (shouldn't happen if previous steps were correct)\n",
+        "    # Insert before </body> if script.js isn't found\n",
+        "    body_end_index = updated_html_content.rfind('</body>')\n",
+        "    if body_end_index != -1:\n",
+        "        # Insert TinyMCE script before </body>\n",
+        "        updated_html_content = updated_html_content[:body_end_index] + tinymce_script_tag_to_insert + updated_html_content[body_end_index:]\n",
+        "        print(\"Warning: script.js tag not found after cleanup. Appended TinyMCE script before </body>.\")\n",
+        "    else:\n",
+        "        # Append to the very end as a last resort\n",
+        "        updated_html_content = updated_html_content + tinymce_script_tag_to_insert\n",
+        "        print(\"Warning: </body> tag not found after cleanup. Appended TinyMCE script to the end of the file.\")\n",
+        "\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Finished updating index.html with TinyMCE JavaScript library.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8fcf26b9"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The previous attempts to correctly place the TinyMCE script and locate the `script.js` and `</body>` tags indicate a persistent issue with the `index.html` file's structure. To resolve this robustly, I will reconstruct the entire `index.html` file, incorporating all previously added components (CodeMirror includes, editor `textarea`s, WYSIWYG `div`, live preview `iframe`) and ensuring the TinyMCE JavaScript library is loaded before `script.js` and that all tags are properly closed.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6c56a2c2"
+      },
+      "outputs": [],
+      "source": [
+        "CODE_MIRROR_VERSION = \"5.65.16\"\n",
+        "CODE_MIRROR_BASE_PATH = f\"lib/codemirror-{CODE_MIRROR_VERSION}/codemirror5-{CODE_MIRROR_VERSION}\"\n",
+        "\n",
+        "TINYMCE_VERSION = \"6.8.3\"\n",
+        "EXTRACT_PATH_TINYMCE = f\"lib/tinymce-{TINYMCE_VERSION}\"\n",
+        "\n",
+        "html_template = f\"\"\"\n",
+        "<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Code Editor IDE</title>\n",
+        "    <link rel=\"stylesheet\" href=\"style.css\">\n",
+        "\n",
+        "    <!-- CodeMirror Includes -->\n",
+        "    <link rel=\"stylesheet\" href=\"{CODE_MIRROR_BASE_PATH}/lib/codemirror.css\">\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/lib/codemirror.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/xml/xml.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/javascript/javascript.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/css/css.js\"></script>\n",
+        "    <script src=\"{CODE_MIRROR_BASE_PATH}/mode/htmlmixed/htmlmixed.js\"></script>\n",
+        "    <!-- END CodeMirror Includes -->\n",
+        "</head>\n",
+        "<body>\n",
+        "    <div class=\"editors-container\">\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>HTML</h2>\n",
+        "            <textarea id=\"html-editor\"></textarea>\n",
+        "        </div>\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>CSS</h2>\n",
+        "            <textarea id=\"css-editor\"></textarea>\n",
+        "        </div>\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>JavaScript</h2>\n",
+        "            <textarea id=\"js-editor\"></textarea>\n",
+        "        </div>\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>WYSIWYG Editor</h2>\n",
+        "            <div id=\"wysiwyg-editor\"></div>\n",
+        "        </div>\n",
+        "    </div>\n",
+        "    <div class=\"output-container\">\n",
+        "        <h2>Output</h2>\n",
+        "        <iframe id=\"live-preview\"></iframe>\n",
+        "    </div>\n",
+        "\n",
+        "    <!-- TinyMCE Include -->\n",
+        "    <script src=\"{EXTRACT_PATH_TINYMCE}/tinymce-{TINYMCE_VERSION}/js/tinymce/tinymce.min.js\"></script>\n",
+        "    <!-- Custom Script -->\n",
+        "    <script src=\"script.js\"></script>\n",
+        "</body>\n",
+        "</html>\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(html_template)\n",
+        "\n",
+        "print(\"Reconstructed index.html with all necessary CodeMirror and TinyMCE includes and editor elements.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "c1ba86c6"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The final instruction for this subtask is to modify `script.js` to initialize TinyMCE on the `wysiwyg-editor` element, using `tinymce.init()` after the CodeMirror instances have been set up.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "e6f62a53"
+      },
+      "outputs": [],
+      "source": [
+        "script_js_content = \"\"\"\n",
+        "// Initialize CodeMirror instances\n",
+        "\n",
+        "const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-editor'), {\n",
+        "    mode: 'htmlmixed',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseTags: true,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-editor'), {\n",
+        "    mode: 'css',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-editor'), {\n",
+        "    mode: 'javascript',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "// Set initial placeholder code\n",
+        "htmlEditor.setValue(`<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Live Preview</title>\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Hello, World!</h1>\n",
+        "    <div id=\"app\"></div>\n",
+        "</body>\n",
+        "</html>`);\n",
+        "\n",
+        "cssEditor.setValue(`body {\n",
+        "    font-family: sans-serif;\n",
+        "    display: flex;\n",
+        "    justify-content: center;\n",
+        "    align-items: center;\n",
+        "    min-height: 100vh;\n",
+        "    background-color: #f0f0f0;\n",
+        "}\n",
+        "\n",
+        "h1 {\n",
+        "    color: #333;\n",
+        "}`);\n",
+        "\n",
+        "jsEditor.setValue(`console.log('Hello from JavaScript!');\n",
+        "document.getElementById('app').innerHTML = '<p>Rendered from JS!</p>';`);\n",
+        "\n",
+        "// Live preview functionality\n",
+        "function updatePreview() {\n",
+        "    const previewFrame = document.getElementById('live-preview');\n",
+        "    const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;\n",
+        "\n",
+        "    preview.open();\n",
+        "    preview.write(\n",
+        "        htmlEditor.getValue() +\n",
+        "        '<style>' + cssEditor.getValue() + '</style>' +\n",
+        "        '<script>' + jsEditor.getValue() + '</script>'\n",
+        "    );\n",
+        "    preview.close();\n",
+        "}\n",
+        "\n",
+        "// Update preview on editor changes\n",
+        "htmlEditor.on('change', updatePreview);\n",
+        "cssEditor.on('change', updatePreview);\n",
+        "jsEditor.on('change', updatePreview);\n",
+        "\n",
+        "// Initial update\n",
+        "updatePreview();\n",
+        "\n",
+        "// Initialize TinyMCE WYSIWYG editor\n",
+        "tinymce.init({\n",
+        "    selector: '#wysiwyg-editor',\n",
+        "    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',\n",
+        "    toolbar_mode: 'floating',\n",
+        "    height: 300,\n",
+        "    initialValue: '<h3>Welcome to the WYSIWYG Editor!</h3><p>Start typing here...</p>'\n",
+        "});\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('script.js', 'w') as f:\n",
+        "    f.write(script_js_content)\n",
+        "\n",
+        "print(\"Updated script.js to initialize CodeMirror instances, set up live preview, and initialize TinyMCE.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7c9398de"
+      },
+      "source": [
+        "## Build Canvas Text Editor\n",
+        "\n",
+        "### Subtask:\n",
+        "Create a specialized text editor that operates directly on an HTML Canvas element, allowing for custom text rendering, effects, and manipulation beyond standard HTML elements.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "809dc522"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The first step for building the canvas text editor is to update `index.html` by adding a `<canvas>` element and a `<textarea>` element within a new editor section, as specified in the instructions. This will provide the visual and input components for the canvas editor.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "01354d43"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "# Define the new editor section for the canvas text editor\n",
+        "canvas_editor_section = '''\n",
+        "        <div class=\"editor-section\">\n",
+        "            <h2>Canvas Text Editor</h2>\n",
+        "            <canvas id=\"canvas-editor\" width=\"600\" height=\"200\" style=\"border:1px solid #ccc;\"></canvas>\n",
+        "            <textarea id=\"canvas-text-input\" rows=\"5\" placeholder=\"Type text here for canvas...\"></textarea>\n",
+        "        </div>'''\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Find the end of the editors-container div and insert the new element before it\n",
+        "# This regex looks for the closing </div> of editors-container.\n",
+        "# It's assumed that editors-container is the first div with that class and structure.\n",
+        "# We will insert it before the output-container.\n",
+        "match_point = html_content.rfind('<div class=\"output-container\">')\n",
+        "\n",
+        "if match_point != -1:\n",
+        "    updated_html_content = \\\n",
+        "        html_content[:match_point] + \\\n",
+        "        canvas_editor_section + \\\n",
+        "        '\\n' + html_content[match_point:]\n",
+        "else:\n",
+        "    print(\"Warning: Could not find the output-container. Appending canvas editor section to the end of the body.\")\n",
+        "    # Fallback if output-container not found\n",
+        "    body_end_index = html_content.rfind('</body>')\n",
+        "    if body_end_index != -1:\n",
+        "        updated_html_content = html_content[:body_end_index] + canvas_editor_section + '\\n' + html_content[body_end_index:]\n",
+        "    else:\n",
+        "        updated_html_content = html_content + canvas_editor_section\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html with a canvas element and textarea for the Canvas Text Editor.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "26a37ec2"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the `canvas` and `textarea` elements are in `index.html`, the next step is to add JavaScript code to `script.js` to get references to these elements, implement a function to draw text on the canvas, and attach an event listener to update the canvas when the textarea input changes, as specified in the instructions.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "070416a5"
+      },
+      "outputs": [],
+      "source": [
+        "script_js_content = \"\"\"\n",
+        "// Initialize CodeMirror instances\n",
+        "\n",
+        "const htmlEditor = CodeMirror.fromTextArea(document.getElementById('html-editor'), {\n",
+        "    mode: 'htmlmixed',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseTags: true,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const cssEditor = CodeMirror.fromTextArea(document.getElementById('css-editor'), {\n",
+        "    mode: 'css',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "const jsEditor = CodeMirror.fromTextArea(document.getElementById('js-editor'), {\n",
+        "    mode: 'javascript',\n",
+        "    lineNumbers: true,\n",
+        "    theme: 'default',\n",
+        "    tabSize: 2,\n",
+        "    indentUnit: 2,\n",
+        "    autoCloseBrackets: true,\n",
+        "});\n",
+        "\n",
+        "// Set initial placeholder code\n",
+        "htmlEditor.setValue(`<!DOCTYPE html>\n",
+        "<html lang=\"en\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>Live Preview</title>\n",
+        "</head>\n",
+        "<body>\n",
+        "    <h1>Hello, World!</h1>\n",
+        "    <div id=\"app\"></div>\n",
+        "</body>\n",
+        "</html>`);\n",
+        "\n",
+        "cssEditor.setValue(`body {\n",
+        "    font-family: sans-serif;\n",
+        "    display: flex;\n",
+        "    justify-content: center;\n",
+        "    align-items: center;\n",
+        "    min-height: 100vh;\n",
+        "    background-color: #f0f0f0;\n",
+        "}\n",
+        "\n",
+        "h1 {\n",
+        "    color: #333;\n",
+        "}`);\n",
+        "\n",
+        "jsEditor.setValue(`console.log('Hello from JavaScript!');\n",
+        "document.getElementById('app').innerHTML = '<p>Rendered from JS!</p>';`);\n",
+        "\n",
+        "// Live preview functionality\n",
+        "function updatePreview() {\n",
+        "    const previewFrame = document.getElementById('live-preview');\n",
+        "    const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;\n",
+        "\n",
+        "    preview.open();\n",
+        "    preview.write(\n",
+        "        htmlEditor.getValue() +\n",
+        "        '<style>' + cssEditor.getValue() + '</style>' +\n",
+        "        '<script>' + jsEditor.getValue() + '</script>'\n",
+        "    );\n",
+        "    preview.close();\n",
+        "}\n",
+        "\n",
+        "// Update preview on editor changes\n",
+        "htmlEditor.on('change', updatePreview);\n",
+        "cssEditor.on('change', updatePreview);\n",
+        "jsEditor.on('change', updatePreview);\n",
+        "\n",
+        "// Initial update\n",
+        "updatePreview();\n",
+        "\n",
+        "// Initialize TinyMCE WYSIWYG editor\n",
+        "tinymce.init({\n",
+        "    selector: '#wysiwyg-editor',\n",
+        "    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',\n",
+        "    toolbar_mode: 'floating',\n",
+        "    height: 300,\n",
+        "    initialValue: '<h3>Welcome to the WYSIWYG Editor!</h3><p>Start typing here...</p>'\n",
+        "});\n",
+        "\n",
+        "// Canvas Text Editor functionality\n",
+        "const canvas = document.getElementById('canvas-editor');\n",
+        "const ctx = canvas.getContext('2d');\n",
+        "const canvasTextInput = document.getElementById('canvas-text-input');\n",
+        "\n",
+        "function drawCanvasText() {\n",
+        "    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas\n",
+        "    ctx.font = '20px Arial';\n",
+        "    ctx.fillStyle = '#000';\n",
+        "    ctx.textAlign = 'left';\n",
+        "    ctx.textBaseline = 'top';\n",
+        "\n",
+        "    const text = canvasTextInput.value;\n",
+        "    const lineHeight = 25;\n",
+        "    const x = 10;\n",
+        "    let y = 10;\n",
+        "\n",
+        "    // Split text by lines and draw each line\n",
+        "    const lines = text.split('\\n');\n",
+        "    lines.forEach(line => {\n",
+        "        ctx.fillText(line, x, y);\n",
+        "        y += lineHeight;\n",
+        "    });\n",
+        "}\n",
+        "\n",
+        "// Set initial placeholder for canvas text input\n",
+        "canvasTextInput.value = 'Hello from Canvas Text Editor!\\nType here to see it on canvas.';\n",
+        "\n",
+        "// Update canvas on text area input\n",
+        "canvasTextInput.addEventListener('input', drawCanvasText);\n",
+        "\n",
+        "// Initial draw for canvas\n",
+        "drawCanvasText();\n",
+        "\"\"\"\n",
+        "\n",
+        "with open('script.js', 'w') as f:\n",
+        "    f.write(script_js_content)\n",
+        "\n",
+        "print(\"Updated script.js to initialize CodeMirror, TinyMCE, and Canvas Text Editor functionality.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "e2b5e912"
+      },
+      "source": [
+        "## Add Interactive Terminal Feature\n",
+        "\n",
+        "### Subtask:\n",
+        "Integrate a web-based terminal that can execute JavaScript commands or simulate a command-line environment within the IDE interface.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9A7VIAN7gUOp"
+      },
+      "source": [
+        "# New Section"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1a98b8a3"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "The first step for adding the interactive terminal is to update `index.html` by adding a new `div` element (`terminal-output`) within a `terminal-container` section, as specified in the instructions. This will serve as the host for the xterm.js terminal.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "831f791a"
+      },
+      "outputs": [],
+      "source": [
+        "import re\n",
+        "\n",
+        "# Define the new terminal container and div element\n",
+        "terminal_section = '''\n",
+        "    <div class=\"terminal-container\">\n",
+        "        <h2>Terminal</h2>\n",
+        "        <div id=\"terminal-output\"></div>\n",
+        "    </div>'''\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Find the closing </body> tag to insert the terminal section before it\n",
+        "body_end_index = html_content.rfind('</body>')\n",
+        "\n",
+        "if body_end_index != -1:\n",
+        "    updated_html_content = \\\n",
+        "        html_content[:body_end_index] + \\\n",
+        "        terminal_section + \\\n",
+        "        '\\n' + html_content[body_end_index:]\n",
+        "else:\n",
+        "    print(\"Warning: Could not find </body> tag. Appending terminal section to the end of the file.\")\n",
+        "    updated_html_content = html_content + terminal_section\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html with a div element for the interactive terminal.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "f50e6f3c"
+      },
+      "source": [
+        "# Task\n",
+        "Download and extract the `xterm.js` library into the `lib` directory for the interactive terminal feature."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "17afd247"
+      },
+      "source": [
+        "## Download xterm.js Library\n",
+        "\n",
+        "### Subtask:\n",
+        "Download the xterm.js library from its official source and save it as a zip file in the `lib` directory.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "53f66a88"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "I will download the xterm.js library from its GitHub releases as a zip file and save it to the `lib` directory, implementing error handling as instructed.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5640f5ba",
+        "outputId": "c4e400ff-8b8f-4e62-aa5c-494452b31026"
+      },
+      "source": [
+        "import requests\n",
+        "import os\n",
+        "\n",
+        "XTERM_VERSION = \"5.3.0\" # Latest stable version at the time of writing\n",
+        "DOWNLOAD_URL = f\"https://github.com/xtermjs/xterm.js/archive/refs/tags/{XTERM_VERSION}.zip\"\n",
+        "LOCAL_ZIP_PATH = f\"lib/xterm-{XTERM_VERSION}.zip\"\n",
+        "\n",
+        "# Create 'lib' directory if it doesn't exist\n",
+        "os.makedirs('lib', exist_ok=True)\n",
+        "\n",
+        "# Download xterm.js\n",
+        "print(f\"Downloading xterm.js from {DOWNLOAD_URL}...\")\n",
+        "try:\n",
+        "    response = requests.get(DOWNLOAD_URL, stream=True)\n",
+        "    response.raise_for_status() # Raise an exception for bad status codes\n",
+        "    with open(LOCAL_ZIP_PATH, 'wb') as f:\n",
+        "        for chunk in response.iter_content(chunk_size=8192):\n",
+        "            f.write(chunk)\n",
+        "    print(\"xterm.js downloaded successfully.\")\n",
+        "except requests.exceptions.RequestException as e:\n",
+        "    print(f\"Error downloading xterm.js: {e}\")\n",
+        "    print(\"Please check the URL or your internet connection.\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Downloading xterm.js from https://github.com/xtermjs/xterm.js/archive/refs/tags/5.3.0.zip...\n",
+            "xterm.js downloaded successfully.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8c0b2bde"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the xterm.js zip file has been successfully downloaded, the next step is to extract its contents to make the library files accessible. This involves unzipping the downloaded file into the `lib` directory.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "749f12c2",
+        "outputId": "50343dff-c53b-4b7d-facf-d702f1e748fc"
+      },
+      "source": [
+        "import zipfile\n",
+        "import os\n",
+        "\n",
+        "# Path to the downloaded zip file\n",
+        "LOCAL_ZIP_PATH = f\"lib/xterm-{XTERM_VERSION}.zip\"\n",
+        "\n",
+        "# Directory to extract xterm.js files into\n",
+        "EXTRACT_PATH_XTERM = f\"lib/xterm-{XTERM_VERSION}\"\n",
+        "\n",
+        "# Create extraction directory if it doesn't exist\n",
+        "if not os.path.exists(EXTRACT_PATH_XTERM):\n",
+        "    os.makedirs(EXTRACT_PATH_XTERM)\n",
+        "\n",
+        "# Extract the zip file\n",
+        "print(f\"Extracting xterm.js to {EXTRACT_PATH_XTERM}...\")\n",
+        "try:\n",
+        "    with zipfile.ZipFile(LOCAL_ZIP_PATH, 'r') as zip_ref:\n",
+        "        # xterm.js zips usually have a top-level folder inside the zip (e.g., xterm.js-5.3.0)\n",
+        "        # We want to extract directly into EXTRACT_PATH_XTERM\n",
+        "        for member in zip_ref.namelist():\n",
+        "            # Example: 'xterm.js-5.3.0/dist/...' to 'lib/xterm-5.3.0/dist/...'\n",
+        "            parts = member.split('/', 1)\n",
+        "            if len(parts) > 1: # It's not a top-level directory itself\n",
+        "                # Construct the new path for extraction\n",
+        "                target_path = os.path.join(EXTRACT_PATH_XTERM, parts[1])\n",
+        "                if not os.path.exists(os.path.dirname(target_path)) and os.path.dirname(target_path) != '':\n",
+        "                    os.makedirs(os.path.dirname(target_path), exist_ok=True)\n",
+        "                if not member.endswith('/'): # Don't try to extract a directory entry as a file\n",
+        "                    with zip_ref.open(member) as source, open(target_path, 'wb') as target:\n",
+        "                        target.write(source.read())\n",
+        "            elif member.endswith('/') and len(parts[0]) > 0: # It's a top-level directory, ensure it exists\n",
+        "                dir_path = os.path.join(EXTRACT_PATH_XTERM, parts[0])\n",
+        "                if not os.path.exists(dir_path):\n",
+        "                    os.makedirs(dir_path, exist_ok=True)\n",
+        "\n",
+        "    print(\"xterm.js extracted successfully.\")\n",
+        "    # Optionally, remove the zip file after extraction\n",
+        "    os.remove(LOCAL_ZIP_PATH)\n",
+        "    print(\"Removed xterm.js zip file.\")\n",
+        "except FileNotFoundError:\n",
+        "    print(f\"Error: xterm.js zip file not found at {LOCAL_ZIP_PATH}\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error extracting xterm.js: {e}\")"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Extracting xterm.js to lib/xterm-5.3.0...\n",
+            "xterm.js extracted successfully.\n",
+            "Removed xterm.js zip file.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "670669bc"
+      },
+      "source": [
+        "**Reasoning**:\n",
+        "Now that the xterm.js library is extracted, I need to update `index.html` to include the necessary xterm.js CSS and JavaScript files. This will involve adding `<link>` tags for the core CSS and `<script>` tags for the core JavaScript, similar to how CodeMirror and TinyMCE were included, ensuring they are loaded before our main `script.js`.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 211
+        },
+        "id": "1349bcc4",
+        "outputId": "b344fd3b-f5ca-4922-bd53-c583156c2492"
+      },
+      "source": [
+        "import re\n",
+        "\n",
+        "XTERM_VERSION = \"5.3.0\"\n",
+        "EXTRACT_PATH_XTERM = f\"lib/xterm-{XTERM_VERSION}\"\n",
+        "\n",
+        "# Read the existing index.html content\n",
+        "with open('index.html', 'r') as f:\n",
+        "    html_content = f.read()\n",
+        "\n",
+        "# Prepare the xterm.js inclusions\n",
+        "xterm_includes = f\"\"\"\n",
+        "    <!-- Xterm.js Includes -->\n",
+        "    <link rel=\"stylesheet\" href=\"{EXTRACT_PATH_XTERM}/xterm.js-{XTERM_VERSION}/css/xterm.css\" />\n",
+        "    <script src=\"{EXTRACT_PATH_XTERM}/xterm.js-{XTERM_VERSION}/lib/xterm.js\"></script>\n",
+        "    <!-- END Xterm.js Includes -->\n",
+        "\"\"\"\n",
+        "\n",
+        "# Find the position of the existing <script src=\"script.js\"></script> tag\n",
+        "# We want xterm.js to load before our custom script.js, but after other library includes (like TinyMCE)\n",
+        "# The current index.html template places script.js after TinyMCE.\n",
+        "# Let's insert xterm.js includes right before the TinyMCE script tag, or before script.js if TinyMCE isn't found.\n",
+        "\n",
+        "target_script_tag = f'    <script src=\"{EXTRACT_PATH_TINYMCE}/tinymce-{TINYMCE_VERSION}/js/tinymce/tinymce.min.js\"></script>'\n",
+        "\n",
+        "insertion_point = html_content.find(target_script_tag)\n",
+        "\n",
+        "if insertion_point != -1:\n",
+        "    updated_html_content = \\\n",
+        "        html_content[:insertion_point] + \\\n",
+        "        xterm_includes + \\\n",
+        "        html_content[insertion_point:]\n",
+        "else:\n",
+        "    print(\"Warning: TinyMCE script tag not found. Attempting to insert Xterm.js before script.js.\")\n",
+        "    script_js_tag = '<script src=\"script.js\"></script>'\n",
+        "    insertion_point = html_content.find(script_js_tag)\n",
+        "    if insertion_point != -1:\n",
+        "        updated_html_content = \\\n",
+        "            html_content[:insertion_point] + \\\n",
+        "            xterm_includes + \\\n",
+        "            html_content[insertion_point:]\n",
+        "    else:\n",
+        "        print(\"Warning: script.js tag not found. Appending Xterm.js includes to the end of the body.\")\n",
+        "        body_end_index = html_content.rfind('</body>')\n",
+        "        if body_end_index != -1:\n",
+        "            updated_html_content = html_content[:body_end_index] + xterm_includes + '\\n' + html_content[body_end_index:]\n",
+        "        else:\n",
+        "            updated_html_content = html_content + xterm_includes # append to end of file\n",
+        "\n",
+        "# Write the updated content back to index.html\n",
+        "with open('index.html', 'w') as f:\n",
+        "    f.write(updated_html_content)\n",
+        "\n",
+        "print(\"Updated index.html to include xterm.js CSS and JS files.\")"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "FileNotFoundError",
+          "evalue": "[Errno 2] No such file or directory: 'index.html'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mFileNotFoundError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-256507440.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;31m# Read the existing index.html content\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0;32mwith\u001b[0m \u001b[0mopen\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'index.html'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'r'\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mf\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m     \u001b[0mhtml_content\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mf\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No such file or directory: 'index.html'"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
